@@ -21,8 +21,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
-/*注册新用户时，用户需设置一个唯一的用户名和一个密码。另外，还需登记邮箱及电话信息。
-如果注册时提供的用户名已由其他用户使用，应反馈一个适当的出错信息；
+/*注册新用户时，用户需输入一个唯一的用户名和一个密码。另外还需登记邮箱及电话信息。
+如果注册时提供的用户名已被注册，应反馈一个适当的出错信息；
 成功注册后，亦应反馈一个成功注册的信息。*/
 // UserRegisterCmd represents the UserRegister command
 var UserRegisterCmd = &cobra.Command{

@@ -32,11 +32,9 @@ var MeetingsClearCmd = &cobra.Command{
 			debugLog.Println("Fail, please log in")
 			fmt.Println("Fail, please log in")
 		}
-
 		if entity.DeleteAllMeetings(entity.CurrentUser.Name) {
 			debugLog.Println("Clear meeting successfully")
-			fmt.Println("Clear meeting successfully")
-			
+			fmt.Println("Clear meeting successfully")	
 		} else {
 			debugLog.Println("Fail to clear meeting")
 			fmt.Println("Fail to clear meeting")
@@ -47,13 +45,13 @@ var MeetingsClearCmd = &cobra.Command{
 
 func init() {
 	RootCmd.AddCommand(MeetingsClearCmd)
-
+	MeetingsClearCmd.Flags().StringP("username", "u", "", "new user's username")
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
 	// MeetingsClearCmd.PersistentFlags().String("foo", "", "A help for foo")
-MeetingsClearCmd.Flags().StringP("username", "u", "", "new user's username")
+
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// MeetingsClearCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")

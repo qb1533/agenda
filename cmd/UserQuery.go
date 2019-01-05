@@ -43,7 +43,6 @@ var UserQueryCmd = &cobra.Command{
 
 func init() {
 	RootCmd.AddCommand(UserQueryCmd)
-
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
